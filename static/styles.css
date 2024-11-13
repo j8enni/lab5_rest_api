@@ -1,0 +1,160 @@
+/* Общий фон страницы */
+body {
+    background: linear-gradient(135deg, #FFB6C1, #ff4aab); /* Градиент от светлого розового к ярко-розовому */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Обеспечиваем, чтобы body занимало всю высоту */
+    display: flex;
+    flex-direction: column; /* Размещаем элементы по вертикали */
+}
+
+/* Оборачивающий контейнер занимает всю высоту экрана */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент будет заполнять пространство между верхом и футером */
+main, .container {
+    flex-grow: 1; /* Заполняет пространство между навигацией и футером */
+}
+
+/* Навигационная панель */
+.navbar {
+    background-color: #FF1493; /* Ярко-розовый цвет */
+    padding-right: 30px; /* Отступ справа для навигации */
+}
+
+.navbar .navbar-brand {
+    margin-left: 30px; /* Отступ слева для логотипа */
+}
+
+.navbar a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Центрирование всего контента страницы */
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Центрирует элементы по горизонтали */
+    align-items: center; /* Центрирует элементы по вертикали */
+    min-height: 80vh; /* Минимальная высота контейнера */
+    flex-direction: column; /* Контент идет по вертикали */
+}
+
+/* Контактная информация */
+.contact-info {
+    max-width: 600px; /* Ограничиваем максимальную ширину блока */
+    margin: 0 auto; /* Центрируем блок */
+    color: #333;
+}
+
+h1 {
+    color: #FF1493; /* Розовый цвет для заголовка */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000000;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #FF1493;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    background-color: #FF1493;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* Автоматический отступ сверху для фиксации внизу */
+}
+
+/* Стили для кнопок */
+.btn-primary, .btn-light {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #FF1493;
+    border-color: #FF1493;
+}
+
+.btn-primary:hover {
+    background-color: #FF69B4; /* Светлее розовый цвет */
+    border-color: #FF69B4;
+}
+
+.btn-light {
+    background-color: white;
+    color: #FF1493;
+}
+
+.btn-light:hover {
+    background-color: #FF1493;
+    color: white;
+}
+
+/* Стили для карточек книг */
+.card, .book-card {
+    border-radius: 15px; /* Скругление углов */
+    overflow: hidden; /* Чтобы контент не выходил за границы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для карточек */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.card:hover, .book-card:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Более сильная тень при наведении */
+}
+
+.card-img-top, .book-card .card-img-top {
+    object-fit: cover;
+    height: 200px; /* Фиксированная высота для изображений */
+}
+
+.card-body, .book-card .card-body {
+    padding: 20px;
+    background-color: white;
+}
+
+/* Стиль для заголовков и описания */
+.card-title, .book-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF1493;
+}
+
+.card-text, .book-card .card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Стили для строки с результатами */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступы между карточками */
+}
+
+/* Оформление для каждой карточки */
+.col-md-4 {
+    width: calc(33.333% - 20px); /* Три карточки в ряд с отступами */
+    margin-bottom: 30px;
+}
