@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">Book Explorer</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="/search">Поиск книг</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент страницы -->
+    <main class="container d-flex align-items-center justify-content-center text-center py-5">
+        <div class="contact-info">
+            <h1>Контактная информация</h1>
+            <p>Если у вас есть вопросы, не стесняйтесь связаться с нами:</p>
+            <p>Email: <a href="mailto:info@bookexplorer.com">info@bookexplorer.com</a></p>
+            <p>Телефон: 123-456-7890</p>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Book Explorer. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+</html>
