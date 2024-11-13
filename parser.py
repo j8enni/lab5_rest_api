@@ -1,4 +1,3 @@
-# parser.py
 import requests
 
 def get_books(query):
